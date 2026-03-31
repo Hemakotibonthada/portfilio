@@ -20,9 +20,8 @@ export default function AllProjects() {
   });
 
   return (
-    <section id="all-projects" className="py-24 px-4 relative">
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/3 h-px bg-gradient-to-r from-transparent via-emerald-400/30 dark:via-emerald-500/30 to-transparent" />
-
+    <section id="all-projects" className="py-28 px-4 relative">
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/3 h-px bg-gradient-to-r from-transparent via-emerald-500/20 to-transparent" />
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -38,15 +37,14 @@ export default function AllProjects() {
           >
             COMPLETE COLLECTION
           </motion.span>
-          <h2 className="text-4xl sm:text-5xl font-extrabold mb-5 bg-gradient-to-b from-gray-900 to-gray-600 dark:from-white dark:to-gray-400 bg-clip-text text-transparent">
+          <h2 className="text-4xl sm:text-5xl font-extrabold mb-5 bg-gradient-to-b from-white to-gray-500 bg-clip-text text-transparent">
             All Projects
           </h2>
-          <p className="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto text-lg">
+          <p className="text-gray-500 max-w-2xl mx-auto text-lg">
             Browse the complete collection of projects by category or search
           </p>
         </motion.div>
 
-        {/* Search bar */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -54,13 +52,13 @@ export default function AllProjects() {
           className="max-w-lg mx-auto mb-8"
         >
           <div className="relative group">
-            <Search size={16} className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 group-focus-within:text-blue-400 transition-colors" />
+            <Search size={16} className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-600 group-focus-within:text-blue-400 transition-colors" />
             <input
               type="text"
               placeholder="Search projects, technologies..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className="w-full pl-11 pr-10 py-3.5 rounded-2xl bg-white/60 dark:bg-gray-900/40 backdrop-blur-sm border border-gray-200/60 dark:border-gray-800/40 text-sm text-gray-800 dark:text-gray-200 placeholder-gray-400 dark:placeholder-gray-600 focus:outline-none focus:border-blue-400/50 dark:focus:border-blue-500/40 focus:ring-2 focus:ring-blue-500/10 transition-all duration-300 shadow-sm dark:shadow-none"
+              className="w-full pl-11 pr-10 py-3.5 rounded-2xl bg-white/[0.03] border border-white/[0.06] text-sm text-gray-200 placeholder-gray-600 focus:outline-none focus:border-blue-500/40 focus:ring-2 focus:ring-blue-500/10 transition-all duration-300"
             />
             {search && (
               <button
@@ -73,7 +71,6 @@ export default function AllProjects() {
           </div>
         </motion.div>
 
-        {/* Category filters */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -88,8 +85,8 @@ export default function AllProjects() {
               onClick={() => setActiveCategory(cat)}
               className={`px-4 py-2 rounded-xl text-sm font-medium transition-all duration-300 ${
                 activeCategory === cat
-                  ? 'bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-500/25 shadow-md shadow-blue-500/5'
-                  : 'bg-white/40 dark:bg-gray-900/30 text-gray-500 dark:text-gray-500 border border-gray-200/40 dark:border-gray-800/30 hover:text-gray-800 dark:hover:text-gray-300 hover:border-gray-300 dark:hover:border-gray-700/50 hover:bg-white/60 dark:hover:bg-gray-800/30'
+                  ? 'bg-blue-500/15 text-blue-400 border border-blue-500/25 shadow-md shadow-blue-500/5'
+                  : 'bg-white/[0.03] text-gray-500 border border-white/[0.06] hover:text-gray-300 hover:border-white/[0.12]'
               }`}
             >
               {cat}
@@ -97,29 +94,27 @@ export default function AllProjects() {
           ))}
         </motion.div>
 
-        {/* Results count */}
         <motion.p layout className="text-sm text-gray-500 mb-6 text-center font-medium">
           <SlidersHorizontal size={14} className="inline mr-1.5 mb-0.5" />
           Showing {filtered.length} project{filtered.length !== 1 ? 's' : ''}
         </motion.p>
 
-        {/* Project grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
           <AnimatePresence mode="popLayout">
             {filtered.map((project) => (
               <motion.div
                 key={project.id}
                 layout
-                initial={{ opacity: 0, scale: 0.9, filter: 'blur(10px)' }}
-                animate={{ opacity: 1, scale: 1, filter: 'blur(0px)' }}
-                exit={{ opacity: 0, scale: 0.9, filter: 'blur(10px)' }}
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
                 className="group"
               >
                 <motion.div
                   whileHover={{ y: -4 }}
                   transition={{ duration: 0.3 }}
-                  className="h-full rounded-xl bg-white/60 dark:bg-gray-900/40 backdrop-blur-sm border border-gray-200/60 dark:border-gray-800/40 hover:border-gray-300 dark:hover:border-gray-600/50 transition-all duration-300 overflow-hidden shadow-sm dark:shadow-none hover:shadow-xl hover:shadow-blue-500/5 dark:hover:shadow-blue-500/5"
+                  className="h-full rounded-xl bg-white/[0.03] border border-white/[0.06] hover:border-white/[0.12] transition-all duration-300 overflow-hidden hover:shadow-xl hover:shadow-blue-500/[0.03]"
                 >
                   <div className={`h-1 bg-gradient-to-r ${project.color} relative overflow-hidden`}>
                     <div className="absolute inset-0 animate-shimmer" />
@@ -133,32 +128,29 @@ export default function AllProjects() {
                         <DynamicIcon name={project.icon} size={17} className="text-white" />
                       </motion.div>
                       <div className="min-w-0">
-                        <h3 className="font-semibold text-sm truncate group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors duration-300">
+                        <h3 className="font-semibold text-sm truncate text-white group-hover:text-blue-400 transition-colors duration-300">
                           {project.name}
                         </h3>
                         <p className="text-xs text-gray-500 truncate">{project.category}</p>
                       </div>
                     </div>
-
-                    <p className="text-xs text-gray-500 dark:text-gray-400 mb-3 line-clamp-2 leading-relaxed">{project.tagline}</p>
-
+                    <p className="text-xs text-gray-500 mb-3 line-clamp-2 leading-relaxed">{project.tagline}</p>
                     <div className="flex flex-wrap gap-1 mb-3">
                       {project.technologies.slice(0, 3).map((tech) => (
-                        <span key={tech} className="text-[10px] px-2 py-0.5 rounded-md bg-gray-100/70 dark:bg-gray-800/50 text-gray-600 dark:text-gray-400 border border-gray-200/40 dark:border-gray-700/20">
+                        <span key={tech} className="text-[10px] px-2 py-0.5 rounded-md bg-white/[0.04] text-gray-400 border border-white/[0.06]">
                           {tech}
                         </span>
                       ))}
                       {project.technologies.length > 3 && (
-                        <span className="text-[10px] px-2 py-0.5 rounded-md bg-gray-100/70 dark:bg-gray-800/50 text-gray-500">
+                        <span className="text-[10px] px-2 py-0.5 rounded-md bg-white/[0.04] text-gray-600">
                           +{project.technologies.length - 3}
                         </span>
                       )}
                     </div>
-
                     <div className="flex items-center gap-2">
                       <Link
                         to={`/project/${project.id}`}
-                        className="group/btn text-xs px-3 py-1.5 rounded-lg bg-gray-100/70 dark:bg-gray-800/50 text-gray-700 dark:text-gray-300 hover:bg-gray-200/70 dark:hover:bg-gray-700/50 transition-all duration-300 flex items-center gap-1"
+                        className="group/btn text-xs px-3 py-1.5 rounded-lg bg-white/[0.05] text-gray-300 hover:bg-white/[0.1] transition-all duration-300 flex items-center gap-1"
                       >
                         Details
                         <ArrowUpRight size={11} className="group-hover/btn:rotate-45 transition-transform duration-300" />
@@ -167,7 +159,7 @@ export default function AllProjects() {
                         href={project.github}
                         target="_blank"
                         rel="noreferrer"
-                        className="text-xs px-3 py-1.5 rounded-lg border border-gray-300/50 dark:border-gray-700/30 text-gray-600 dark:text-gray-400 hover:bg-gray-100/50 dark:hover:bg-gray-800/40 transition-all duration-300 flex items-center gap-1"
+                        className="text-xs px-3 py-1.5 rounded-lg border border-white/[0.08] text-gray-400 hover:bg-white/[0.04] transition-all duration-300 flex items-center gap-1"
                       >
                         <Github size={11} /> Code
                       </a>
@@ -180,15 +172,11 @@ export default function AllProjects() {
         </div>
 
         {filtered.length === 0 && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className="text-center py-20"
-          >
-            <div className="w-16 h-16 rounded-2xl bg-gray-100 dark:bg-gray-800/40 flex items-center justify-center mx-auto mb-4">
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-center py-20">
+            <div className="w-16 h-16 rounded-2xl bg-white/[0.03] border border-white/[0.06] flex items-center justify-center mx-auto mb-4">
               <Search size={24} className="text-gray-600" />
             </div>
-            <p className="text-lg text-gray-500 mb-2">No projects found</p>
+            <p className="text-lg text-gray-400 mb-2">No projects found</p>
             <p className="text-sm text-gray-600 mb-4">Try adjusting your search or filter criteria</p>
             <button
               onClick={() => { setActiveCategory('All'); setSearch(''); }}

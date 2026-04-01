@@ -34,14 +34,14 @@ export default function About() {
   const inView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section id="about" className="py-32 px-4 relative" ref={ref}>
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-2/3 h-px bg-gradient-to-r from-transparent via-blue-500/20 to-transparent" />
+    <section id="about" className="py-28 px-4 relative" ref={ref}>
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-px bg-gradient-to-r from-transparent via-blue-500/20 to-transparent" />
       {/* Background accent */}
       <div className="absolute top-1/2 right-0 w-[500px] h-[500px] bg-blue-600/[0.03] rounded-full blur-[150px] -translate-y-1/2" />
 
       <div className="max-w-6xl mx-auto">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger}>
-          <motion.div variants={fadeUp} className="text-center mb-20">
+          <motion.div variants={fadeUp} className="text-center mb-16">
             <span className="inline-block px-4 py-1.5 rounded-full text-xs font-medium bg-blue-500/10 text-blue-400 border border-blue-500/20 mb-5 animate-border-glow">
               ABOUT ME
             </span>
@@ -89,7 +89,7 @@ export default function About() {
                 key={item.label}
                 variants={fadeUp}
                 whileHover={{ y: -6, scale: 1.02 }}
-                className="group glass-card p-6 transition-all duration-500 cursor-default"
+                className="group glass-card p-6 transition-all duration-500 cursor-default overflow-hidden"
                 onMouseMove={(e) => {
                   const rect = e.currentTarget.getBoundingClientRect();
                   e.currentTarget.style.setProperty('--mouse-x', `${e.clientX - rect.left}px`);

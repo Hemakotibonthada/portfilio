@@ -59,8 +59,8 @@ export default function FeaturedProjects() {
   const featured = projects.filter((p) => p.featured);
 
   return (
-    <section id="projects" className="py-32 px-4 relative">
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-2/3 h-px bg-gradient-to-r from-transparent via-violet-500/20 to-transparent" />
+    <section id="projects" className="py-28 px-4 relative">
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-px bg-gradient-to-r from-transparent via-violet-500/20 to-transparent" />
       {/* Background glow */}
       <div className="absolute top-1/4 right-0 w-[600px] h-[600px] bg-violet-600/[0.03] rounded-full blur-[150px]" />
       <div className="absolute bottom-1/4 left-0 w-[500px] h-[500px] bg-blue-600/[0.03] rounded-full blur-[120px]" />
@@ -71,7 +71,7 @@ export default function FeaturedProjects() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-20"
+          className="text-center mb-16"
         >
           <motion.span
             initial={{ opacity: 0, scale: 0.9 }}
@@ -94,7 +94,7 @@ export default function FeaturedProjects() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: '-50px' }}
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-5"
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 items-stretch"
           style={{ perspective: '1200px' }}
         >
           {featured.map((project) => (

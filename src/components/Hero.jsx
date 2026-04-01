@@ -145,9 +145,9 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.1, type: 'spring', stiffness: 200 }}
-          className="mb-10"
+          className="mb-10 flex justify-center"
         >
-          <div className="relative inline-block w-44 h-44 sm:w-48 sm:h-48">
+          <div className="relative w-44 h-44 sm:w-48 sm:h-48">
             {/* Orbit rings */}
             <div className="absolute inset-[-12px] rounded-full border border-white/[0.04] animate-orbit" >
               <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-blue-400 shadow-[0_0_12px_rgba(96,165,250,0.8)]" />
@@ -194,7 +194,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.35 }}
-          className="text-xl sm:text-2xl lg:text-3xl text-gray-400 mb-6 font-light h-[40px]"
+          className="text-xl sm:text-2xl lg:text-3xl text-gray-400 mb-6 font-light min-h-[36px] sm:min-h-[40px]"
         >
           <TypewriterLoop texts={['Full-Stack Developer', 'AI Engineer', 'IoT Architect', 'System Designer']} />
         </motion.div>

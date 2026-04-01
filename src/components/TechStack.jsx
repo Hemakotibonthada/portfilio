@@ -42,8 +42,8 @@ const cardVariants = {
 
 export default function TechStack() {
   return (
-    <section id="tech-stack" className="py-32 px-4 relative">
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-2/3 h-px bg-gradient-to-r from-transparent via-purple-500/20 to-transparent" />
+    <section id="tech-stack" className="py-28 px-4 relative">
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-px bg-gradient-to-r from-transparent via-purple-500/20 to-transparent" />
       {/* Background accent */}
       <div className="absolute top-1/3 left-0 w-[500px] h-[500px] bg-violet-600/[0.03] rounded-full blur-[150px]" />
       <div className="absolute bottom-1/4 right-0 w-[400px] h-[400px] bg-blue-600/[0.03] rounded-full blur-[120px]" />
@@ -53,7 +53,7 @@ export default function TechStack() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-20"
+          className="text-center mb-16"
         >
           <motion.span
             initial={{ opacity: 0, scale: 0.9 }}
@@ -76,7 +76,7 @@ export default function TechStack() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: '-50px' }}
-          className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4"
+          className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 items-start"
         >
           {Object.entries(techStack).map(([section, techs]) => {
             const Icon = sectionIcons[section] || Cpu;

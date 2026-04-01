@@ -48,17 +48,17 @@ export default function ProjectDetail() {
               <div className={`h-2 bg-gradient-to-r ${project.color} relative overflow-hidden`}>
                 <div className="absolute inset-0 animate-shimmer" />
               </div>
-              <div className="p-8 sm:p-10">
-                <div className="flex items-start gap-5 mb-6">
+              <div className="p-6 sm:p-8 lg:p-10">
+                <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-5 mb-6">
                   <motion.div
                     whileHover={{ rotate: [0, -5, 5, 0], scale: 1.05 }}
-                    className={`w-18 h-18 rounded-2xl bg-gradient-to-br ${project.color} flex items-center justify-center shrink-0 shadow-xl`}
+                    className={`w-16 h-16 sm:w-18 sm:h-18 rounded-2xl bg-gradient-to-br ${project.color} flex items-center justify-center shrink-0 shadow-xl`}
                   >
-                    <DynamicIcon name={project.icon} size={34} className="text-white" />
+                    <DynamicIcon name={project.icon} size={30} className="text-white" />
                   </motion.div>
-                  <div>
-                    <h1 className="text-3xl sm:text-4xl font-extrabold mb-2 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">{project.name}</h1>
-                    <p className="text-gray-400 text-lg">{project.tagline}</p>
+                  <div className="min-w-0">
+                    <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold mb-2 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">{project.name}</h1>
+                    <p className="text-gray-400 text-base sm:text-lg">{project.tagline}</p>
                     <span className="inline-block mt-3 text-xs px-3 py-1.5 rounded-xl bg-white/[0.05] text-gray-400 border border-white/[0.06]">
                       {project.category}
                     </span>
@@ -83,7 +83,7 @@ export default function ProjectDetail() {
             </div>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 gap-5">
             <motion.div variants={fadeUp}>
               <div className="h-full rounded-2xl bg-white/[0.03] border border-white/[0.06] p-7 hover:border-white/[0.1] transition-all duration-500">
                 <div className="flex items-center gap-2 mb-5">

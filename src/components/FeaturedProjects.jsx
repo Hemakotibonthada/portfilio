@@ -1,49 +1,8 @@
-import { useRef } from 'react';
-import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Github, ArrowUpRight, ExternalLink } from 'lucide-react';
+import { Github, ArrowUpRight } from 'lucide-react';
 import { projects } from '../data/projects';
 import DynamicIcon from './DynamicIcon';
-
-function TiltCard({ children, className }) {
-  const ref = useRef(null);
-  const x = useMotionValue(0);
-  const y = useMotionValue(0);
-  const mouseX = useMotionValue(0);
-  const mouseY = useMotionValue(0);
-
-  const rotateX = useSpring(useTransform(y, [-0.5, 0.5], [10, -10]), { stiffness: 300, damping: 30 });
-  const rotateY = useSpring(useTransform(x, [-0.5, 0.5], [-10, 10]), { stiffness: 300, damping: 30 });
-
-  const handleMouse = (e) => {
-    const rect = ref.current.getBoundingClientRect();
-    x.set((e.clientX - rect.left) / rect.width - 0.5);
-    y.set((e.clientY - rect.top) / rect.height - 0.5);
-    mouseX.set(e.clientX - rect.left);
-    mouseY.set(e.clientY - rect.top);
-  };
-
-  return (
-    <motion.div
-      ref={ref}
-      onMouseMove={handleMouse}
-      onMouseLeave={() => { x.set(0); y.set(0); }}
-      style={{ rotateX, rotateY, transformStyle: 'preserve-3d' }}
-      className={className}
-    >
-      <motion.div
-        className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"
-        style={{
-          background: useTransform(
-            [mouseX, mouseY],
-            ([mx, my]) => `radial-gradient(400px circle at ${mx}px ${my}px, rgba(99, 102, 241, 0.08), transparent 50%)`
-          ),
-        }}
-      />
-      {children}
-    </motion.div>
-  );
-}
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -51,8 +10,8 @@ const containerVariants = {
 };
 
 const itemVariants = {
-  hidden: { opacity: 0, y: 50, filter: 'blur(10px)' },
-  visible: { opacity: 1, y: 0, filter: 'blur(0px)', transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] } },
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } },
 };
 
 export default function FeaturedProjects() {
@@ -94,13 +53,14 @@ export default function FeaturedProjects() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: '-50px' }}
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 items-stretch"
-          style={{ perspective: '1200px' }}
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch"
         >
           {featured.map((project) => (
-            <motion.div key={project.id} variants={itemVariants} className="group relative">
-              <TiltCard className="h-full relative">
-                <div className="h-full rounded-2xl bg-white/[0.03] border border-white/[0.06] overflow-hidden hover:border-white/[0.12] transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/[0.06]">
+            <motion.div key={project.id} variants={itemVariants} className="group">
+              <motion.div
+                whileHover={{ y: -4 }}
+                transition={{ duration: 0.3 }}
+                className="h-full rounded-2xl bg-white/[0.03] border border-white/[0.06] overflow-hidden hover:border-white/[0.12] transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/[0.06]">
                   {/* Gradient header bar with shimmer */}
                   <div className={`h-1.5 bg-gradient-to-r ${project.color} relative overflow-hidden`}>
                     <div className="absolute inset-0 animate-shimmer" />
@@ -161,8 +121,7 @@ export default function FeaturedProjects() {
                       </a>
                     </div>
                   </div>
-                </div>
-              </TiltCard>
+              </motion.div>
             </motion.div>
           ))}
         </motion.div>

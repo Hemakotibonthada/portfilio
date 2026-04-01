@@ -42,8 +42,8 @@ export default function Stats() {
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.12, duration: 0.6, type: 'spring' }}
-              whileHover={{ y: -8, scale: 1.04 }}
-              className={`group relative ${item.glow}`}
+              whileHover={{ y: -4 }}
+              className={`group relative`}
             >
               <div className="relative text-center p-8 rounded-2xl bg-white/[0.03] border border-white/[0.06] hover:border-white/[0.12] transition-all duration-500 hover:shadow-xl">
                 <motion.div whileHover={{ rotate: [0, -10, 10, 0], scale: 1.15 }} transition={{ duration: 0.5 }}>

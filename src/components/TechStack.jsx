@@ -36,8 +36,8 @@ const containerVariants = {
 };
 
 const cardVariants = {
-  hidden: { opacity: 0, y: 30, scale: 0.95, filter: 'blur(6px)' },
-  visible: { opacity: 1, y: 0, scale: 1, filter: 'blur(0px)', transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } },
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] } },
 };
 
 export default function TechStack() {
@@ -84,7 +84,7 @@ export default function TechStack() {
               <motion.div
                 key={section}
                 variants={cardVariants}
-                whileHover={{ y: -8 }}
+                whileHover={{ y: -4 }}
                 className={`group relative overflow-hidden rounded-2xl bg-white/[0.03] border border-white/[0.06] p-6 hover:border-white/[0.12] transition-all duration-500 hover:shadow-xl ${sectionGlow[section] || ''}`}
                 onMouseMove={(e) => {
                   const rect = e.currentTarget.getBoundingClientRect();

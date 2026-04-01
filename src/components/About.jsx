@@ -1,22 +1,15 @@
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { Code2, Brain, Cpu, Globe, Zap, Shield, Terminal, Layers } from 'lucide-react';
+import { Code2, Brain, Cpu, Globe, Zap, Shield } from 'lucide-react';
 import { profile, stats } from '../data/projects';
 
 const highlights = [
-  { icon: Brain, label: 'AI & ML', desc: 'Deep learning, NLP, Computer Vision, LLM agents', color: 'from-violet-500 to-purple-600', glow: 'shadow-violet-500/20' },
-  { icon: Globe, label: 'Full-Stack', desc: 'React, Node.js, FastAPI, Next.js, TypeScript', color: 'from-blue-500 to-cyan-500', glow: 'shadow-blue-500/20' },
-  { icon: Cpu, label: 'IoT & Edge', desc: 'ESP32, MQTT, Embedded firmware, PlatformIO', color: 'from-emerald-500 to-teal-500', glow: 'shadow-emerald-500/20' },
-  { icon: Shield, label: 'FinTech', desc: 'Algorithmic trading, Risk engines, OpenVINO', color: 'from-amber-500 to-orange-500', glow: 'shadow-amber-500/20' },
-  { icon: Zap, label: 'Desktop & Mobile', desc: 'Electron, Tauri, Flutter, React Native', color: 'from-rose-500 to-pink-500', glow: 'shadow-rose-500/20' },
-  { icon: Code2, label: 'DevOps', desc: 'Docker, CI/CD, Firebase, Cloud deployment', color: 'from-indigo-500 to-blue-500', glow: 'shadow-indigo-500/20' },
-];
-
-const metrics = [
-  { value: '40+', label: 'Projects', icon: Layers },
-  { value: '35+', label: 'Technologies', icon: Terminal },
-  { value: '15', label: 'Domains', icon: Globe },
-  { value: '500K+', label: 'Lines of Code', icon: Code2 },
+  { icon: Brain, label: 'AI & ML', desc: 'Deep learning, NLP, Computer Vision, LLM agents', color: 'from-violet-500 to-purple-600' },
+  { icon: Globe, label: 'Full-Stack', desc: 'React, Node.js, FastAPI, Next.js, TypeScript', color: 'from-blue-500 to-cyan-500' },
+  { icon: Cpu, label: 'IoT & Edge', desc: 'ESP32, MQTT, Embedded firmware, PlatformIO', color: 'from-emerald-500 to-teal-500' },
+  { icon: Shield, label: 'FinTech', desc: 'Algorithmic trading, Risk engines, OpenVINO', color: 'from-amber-500 to-orange-500' },
+  { icon: Zap, label: 'Desktop & Mobile', desc: 'Electron, Tauri, Flutter, React Native', color: 'from-rose-500 to-pink-500' },
+  { icon: Code2, label: 'DevOps', desc: 'Docker, CI/CD, Firebase, Cloud deployment', color: 'from-indigo-500 to-blue-500' },
 ];
 
 const fadeUp = {
@@ -54,8 +47,8 @@ export default function About() {
           </motion.div>
 
           {/* Bio Card with gradient border */}
-          <motion.div variants={fadeUp} className="mb-16">
-            <div className="gradient-border p-8 sm:p-12">
+          <motion.div variants={fadeUp} className="mb-14">
+            <div className="rounded-2xl bg-white/[0.03] border border-white/[0.06] p-8 sm:p-10">
               <div className="max-w-3xl mx-auto text-center">
                 <p className="text-lg sm:text-xl text-gray-300 leading-relaxed mb-6">
                   {profile.bio}
@@ -69,43 +62,19 @@ export default function About() {
             </div>
           </motion.div>
 
-          {/* Mini metrics */}
-          <motion.div variants={stagger} className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-16">
-            {metrics.map((m, i) => (
-              <motion.div key={m.label} variants={fadeUp}
-                className="glass-card p-5 text-center group transition-all duration-500 cursor-default"
-              >
-                <m.icon size={18} className="text-blue-400 mx-auto mb-2 group-hover:scale-110 transition-transform" />
-                <div className="text-2xl font-bold text-white mb-0.5">{m.value}</div>
-                <div className="text-xs text-gray-500 font-medium">{m.label}</div>
-              </motion.div>
-            ))}
-          </motion.div>
-
           {/* Expertise Grid */}
           <motion.div variants={stagger} className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {highlights.map((item, i) => (
+            {highlights.map((item) => (
               <motion.div
                 key={item.label}
                 variants={fadeUp}
-                whileHover={{ y: -6, scale: 1.02 }}
-                className="group glass-card p-6 transition-all duration-500 cursor-default overflow-hidden"
-                onMouseMove={(e) => {
-                  const rect = e.currentTarget.getBoundingClientRect();
-                  e.currentTarget.style.setProperty('--mouse-x', `${e.clientX - rect.left}px`);
-                  e.currentTarget.style.setProperty('--mouse-y', `${e.clientY - rect.top}px`);
-                }}
+                whileHover={{ y: -4 }}
+                className="group rounded-2xl bg-white/[0.03] border border-white/[0.06] p-6 hover:border-white/[0.12] transition-all duration-500 cursor-default"
               >
-                {/* Hover glow spot */}
-                <div className="pointer-events-none absolute inset-0 rounded-[1.25rem] opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                  style={{ background: 'radial-gradient(400px circle at var(--mouse-x,50%) var(--mouse-y,50%), rgba(99,102,241,0.06), transparent 50%)' }} />
-                <div className="relative flex items-start gap-4">
-                  <motion.div
-                    whileHover={{ rotate: [0, -8, 8, 0], scale: 1.15 }}
-                    className={`w-12 h-12 rounded-xl bg-gradient-to-br ${item.color} flex items-center justify-center shrink-0 shadow-lg ${item.glow} group-hover:shadow-xl transition-shadow duration-500`}
-                  >
+                <div className="flex items-start gap-4">
+                  <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${item.color} flex items-center justify-center shrink-0 shadow-lg`}>
                     <item.icon size={22} className="text-white" />
-                  </motion.div>
+                  </div>
                   <div>
                     <h3 className="font-semibold text-white mb-1.5 group-hover:text-blue-400 transition-colors duration-300">{item.label}</h3>
                     <p className="text-sm text-gray-500 leading-relaxed">{item.desc}</p>

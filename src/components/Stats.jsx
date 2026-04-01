@@ -45,7 +45,7 @@ export default function Stats() {
               whileHover={{ y: -8, scale: 1.04 }}
               className={`group relative ${item.glow}`}
             >
-              <div className="relative text-center p-8 glass-card transition-all duration-500 hover:shadow-xl">
+              <div className="relative text-center p-8 rounded-2xl bg-white/[0.03] border border-white/[0.06] hover:border-white/[0.12] transition-all duration-500 hover:shadow-xl">
                 <motion.div whileHover={{ rotate: [0, -10, 10, 0], scale: 1.15 }} transition={{ duration: 0.5 }}>
                   <div className={`mx-auto mb-4 w-14 h-14 rounded-2xl bg-gradient-to-br ${item.color} flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow duration-500`}>
                     <item.icon className="text-white" size={24} />

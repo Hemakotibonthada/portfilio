@@ -16,7 +16,7 @@ export default function Footer() {
             whileHover={{ y: -5, scale: 1.1, boxShadow: '0 0 30px rgba(99,102,241,0.2)' }}
             whileTap={{ scale: 0.95 }}
             onClick={scrollToTop}
-            className="p-3.5 rounded-2xl glass-card text-gray-500 hover:text-white transition-all duration-300"
+            className="p-3.5 rounded-2xl bg-white/[0.03] border border-white/[0.06] hover:border-white/[0.12] text-gray-500 hover:text-white transition-all duration-300"
           >
             <ArrowUp size={20} />
           </motion.button>
@@ -59,7 +59,7 @@ export default function Footer() {
               href={profile.github}
               target="_blank"
               rel="noreferrer"
-              className="p-3 rounded-xl glass-card text-gray-500 hover:text-white transition-all duration-300"
+              className="p-3 rounded-xl bg-white/[0.03] border border-white/[0.06] hover:border-white/[0.12] text-gray-500 hover:text-white transition-all duration-300"
             >
               <Github size={20} />
             </motion.a>

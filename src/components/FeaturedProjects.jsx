@@ -100,7 +100,7 @@ export default function FeaturedProjects() {
           {featured.map((project) => (
             <motion.div key={project.id} variants={itemVariants} className="group relative">
               <TiltCard className="h-full relative">
-                <div className="h-full glass-card overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/[0.06]">
+                <div className="h-full rounded-2xl bg-white/[0.03] border border-white/[0.06] overflow-hidden hover:border-white/[0.12] transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/[0.06]">
                   {/* Gradient header bar with shimmer */}
                   <div className={`h-1.5 bg-gradient-to-r ${project.color} relative overflow-hidden`}>
                     <div className="absolute inset-0 animate-shimmer" />

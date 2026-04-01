@@ -85,7 +85,7 @@ export default function TechStack() {
                 key={section}
                 variants={cardVariants}
                 whileHover={{ y: -8 }}
-                className={`group glass-card p-6 transition-all duration-500 hover:shadow-xl ${sectionGlow[section] || ''}`}
+                className={`group relative overflow-hidden rounded-2xl bg-white/[0.03] border border-white/[0.06] p-6 hover:border-white/[0.12] transition-all duration-500 hover:shadow-xl ${sectionGlow[section] || ''}`}
                 onMouseMove={(e) => {
                   const rect = e.currentTarget.getBoundingClientRect();
                   e.currentTarget.style.setProperty('--mouse-x', `${e.clientX - rect.left}px`);

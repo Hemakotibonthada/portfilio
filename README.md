@@ -1,6 +1,6 @@
 # Hema Koteswar Naidu — Portfolio
 
-> Single-file HTML portfolio. No build step. Auto-deployed to GitHub Pages.
+> Single-file HTML portfolio. No build step. Served by GitHub Pages directly from the `main` branch root.
 
 **Live site**: https://hemakotibonthada.github.io/portfilio/
 
@@ -10,12 +10,11 @@
 |------|---------|
 | `index.html` | Self-contained portfolio (HTML + CSS + JS). |
 | `MyImage.png` | Hero photo. |
-| `.github/workflows/deploy.yml` | Publishes the site to GitHub Pages on every push to `main`. |
 
 ## About me
 
 - **DevOps Engineer** @ Tata Consultancy Services (3+ years, "A" performance band, currently serving notice period)
-- **Founder** of **Circuvent Technologies / HT R&D Labs** — engineering what's next.
+- **Founder** of **Circuvent Technologies / HT R&D Labs** — engineering what''s next.
 - 50+ shipped projects across AI, IoT, FinTech, HealthTech, Enterprise SaaS, and Mobile.
 
 ## Contact
@@ -38,4 +37,4 @@ python -m http.server 8080
 
 ## Deploy
 
-Push to `main`. The workflow at `.github/workflows/deploy.yml` will publish to GitHub Pages automatically.
+Push to `main`. GitHub Pages publishes `/` from the `main` branch automatically.

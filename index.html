@@ -1,24 +1,1749 @@
 <!doctype html>
-<html lang="en" class="dark">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hema Koteswar Naidu | Full-Stack Developer & AI Engineer</title>
-    <meta name="description" content="Portfolio of Hema Koteswar Naidu — Full-Stack Developer & AI Engineer with 40+ projects in AI, IoT, FinTech, Healthcare" />
-    <meta name="theme-color" content="#050507" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <style>
-      * { margin: 0; padding: 0; box-sizing: border-box; }
-      html { scroll-behavior: smooth; }
-      body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: #050507; }
-      h1, h2, h3, h4, h5, h6 { font-family: 'Space Grotesk', 'Inter', sans-serif; }
-    </style>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="dark" />
+<meta name="theme-color" content="#0B0F14" />
+<title>Hema Koteswar Naidu — Innovator. DevOps Engineer. Builder of 50+ Products.</title>
+<meta name="description" content="Portfolio of Hema Koteswar Naidu (Bonthada) — DevOps Engineer at TCS, Founder of Circuvent Technologies. AI, IoT, FinTech, HealthTech, and Full-Stack products shipped end-to-end." />
+<meta property="og:title" content="Hema Koteswar Naidu — Innovator & Full-Stack Builder" />
+<meta property="og:description" content="3+ years in IT. DevOps Engineer at TCS. Founder of Circuvent Technologies. 50+ shipped projects across AI, IoT, FinTech, HealthTech." />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+<style>
+  /* ---------------- Reset / Tokens ---------------- */
+  *,
+  *::before,
+  *::after { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  :root {
+    --bg-0: #07090d;
+    --bg-1: #0b0f14;
+    --bg-2: #121821;
+    --bg-3: #1a2330;
+    --line: rgba(255, 255, 255, 0.08);
+    --line-strong: rgba(255, 255, 255, 0.16);
+    --text-0: #f4f7fb;
+    --text-1: #c5cdd9;
+    --text-2: #8a93a3;
+    --text-3: #5e6877;
+    --cyan: #00d4e6;
+    --cyan-soft: #00d4e633;
+    --lime: #8bc34a;
+    --violet: #b06bff;
+    --amber: #ffb547;
+    --rose: #ff5d8f;
+    --radius-sm: 10px;
+    --radius: 16px;
+    --radius-lg: 22px;
+    --shadow-1: 0 1px 0 rgba(255, 255, 255, 0.05) inset, 0 8px 24px rgba(0, 0, 0, 0.3);
+    --shadow-2: 0 0 0 1px rgba(0, 212, 230, 0.25), 0 12px 40px rgba(0, 212, 230, 0.15);
+    --grad-1: linear-gradient(135deg, #00d4e6 0%, #b06bff 100%);
+    --grad-2: linear-gradient(135deg, #8bc34a 0%, #00d4e6 100%);
+    --grad-3: linear-gradient(135deg, #ff5d8f 0%, #b06bff 100%);
+    --grad-bg: radial-gradient(1200px 600px at 80% -10%, rgba(0, 212, 230, 0.18), transparent 60%),
+               radial-gradient(900px 500px at 10% 20%, rgba(176, 107, 255, 0.15), transparent 60%),
+               radial-gradient(700px 600px at 50% 110%, rgba(139, 195, 74, 0.10), transparent 60%);
+  }
+
+  body {
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg-0);
+    color: var(--text-0);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: var(--grad-bg);
+    z-index: -2;
+    pointer-events: none;
+  }
+  body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+    background-size: 48px 48px;
+    background-position: -1px -1px;
+    mask-image: radial-gradient(ellipse at top, black 30%, transparent 75%);
+    -webkit-mask-image: radial-gradient(ellipse at top, black 30%, transparent 75%);
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  a { color: inherit; text-decoration: none; }
+  ::selection { background: var(--cyan); color: var(--bg-0); }
+  img { max-width: 100%; display: block; }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* ---------------- Nav ---------------- */
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    background: rgba(7, 9, 13, 0.65);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 0;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+  }
+  .brand-mark {
+    width: 32px;
+    height: 32px;
+    border-radius: 9px;
+    background: var(--grad-1);
+    display: grid;
+    place-items: center;
+    color: #08121a;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 800;
+    box-shadow: 0 6px 22px rgba(0, 212, 230, 0.35);
+  }
+  .brand-text {
+    font-size: 15px;
+    color: var(--text-0);
+  }
+  .brand-text small {
+    display: block;
+    font-size: 11px;
+    color: var(--text-2);
+    font-weight: 500;
+  }
+  .nav-links {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+  }
+  .nav-links a {
+    padding: 8px 14px;
+    border-radius: 10px;
+    font-size: 14px;
+    color: var(--text-1);
+    transition: all 0.2s ease;
+  }
+  .nav-links a:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-0);
+  }
+  .nav-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 16px;
+    border-radius: 10px;
+    background: var(--grad-1);
+    color: #08121a !important;
+    font-weight: 600;
+    font-size: 13px;
+    box-shadow: 0 6px 24px rgba(0, 212, 230, 0.25);
+    transition: transform 0.15s ease;
+  }
+  .nav-cta:hover { transform: translateY(-1px); }
+  .nav-toggle {
+    display: none;
+    background: transparent;
+    border: 1px solid var(--line);
+    color: var(--text-0);
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* ---------------- Sections ---------------- */
+  section { padding: 96px 0; position: relative; }
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: rgba(0, 212, 230, 0.08);
+    border: 1px solid rgba(0, 212, 230, 0.3);
+    color: var(--cyan);
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .eyebrow::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--cyan);
+    box-shadow: 0 0 12px var(--cyan);
+  }
+  .section-title {
+    font-size: clamp(28px, 4vw, 44px);
+    margin: 14px 0 12px;
+    letter-spacing: -0.02em;
+    font-weight: 800;
+    line-height: 1.1;
+  }
+  .section-subtitle {
+    color: var(--text-2);
+    max-width: 720px;
+    font-size: 16px;
+  }
+  .section-head { margin-bottom: 48px; }
+
+  /* ---------------- Hero ---------------- */
+  .hero {
+    padding: 80px 0 60px;
+    min-height: 92vh;
+    display: flex;
+    align-items: center;
+  }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 60px;
+    align-items: center;
+    width: 100%;
+  }
+  .hero-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--line-strong);
+    font-size: 13px;
+    color: var(--text-1);
+    margin-bottom: 24px;
+  }
+  .hero-tag .dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--lime);
+    box-shadow: 0 0 10px var(--lime);
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.7; transform: scale(1.2); }
+  }
+  .hero h1 {
+    font-size: clamp(42px, 6.6vw, 76px);
+    line-height: 1.02;
+    letter-spacing: -0.03em;
+    margin: 0 0 20px;
+    font-weight: 800;
+  }
+  .hero h1 .gradient-text {
+    background: var(--grad-1);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+  .hero-sub {
+    font-size: 18px;
+    color: var(--text-1);
+    max-width: 580px;
+    margin: 0 0 32px;
+  }
+  .hero-sub strong { color: var(--text-0); font-weight: 600; }
+  .hero-roles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 32px;
+  }
+  .role-chip {
+    padding: 7px 14px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--line);
+    font-size: 13px;
+    color: var(--text-1);
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .role-chip.cyan { border-color: rgba(0, 212, 230, 0.4); color: var(--cyan); background: rgba(0, 212, 230, 0.06); }
+  .role-chip.violet { border-color: rgba(176, 107, 255, 0.4); color: var(--violet); background: rgba(176, 107, 255, 0.06); }
+  .role-chip.lime { border-color: rgba(139, 195, 74, 0.4); color: var(--lime); background: rgba(139, 195, 74, 0.06); }
+  .hero-ctas {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 24px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 15px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    border: none;
+    font-family: inherit;
+  }
+  .btn-primary {
+    background: var(--grad-1);
+    color: #08121a;
+    box-shadow: 0 10px 30px rgba(0, 212, 230, 0.25);
+  }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 14px 40px rgba(0, 212, 230, 0.4); }
+  .btn-ghost {
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--text-0);
+    border: 1px solid var(--line-strong);
+  }
+  .btn-ghost:hover { background: rgba(255, 255, 255, 0.08); border-color: var(--cyan); color: var(--cyan); }
+
+  /* Hero right column — photo over terminal card */
+  .hero-right { position: relative; }
+  .hero-photo {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--line-strong);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(0, 212, 230, 0.15);
+    display: block;
+    background: var(--bg-2);
+    filter: contrast(1.02) saturate(1.05);
+  }
+  .photo-wrap {
+    position: relative;
+    border-radius: var(--radius-lg);
+  }
+  .photo-wrap::before {
+    content: "";
+    position: absolute;
+    inset: -8px;
+    border-radius: calc(var(--radius-lg) + 6px);
+    background: var(--grad-1);
+    opacity: 0.18;
+    filter: blur(28px);
+    z-index: -1;
+  }
+  .photo-tag {
+    position: absolute;
+    left: 18px;
+    bottom: 18px;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: rgba(7, 9, 13, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    font-size: 12px;
+    color: var(--text-0);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .photo-tag .pulse {
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: var(--lime);
+    box-shadow: 0 0 10px var(--lime);
+    animation: pulse 2s infinite;
+  }
+  .hero-card-mini {
+    margin-top: 18px;
+    background: linear-gradient(180deg, rgba(18, 24, 33, 0.9) 0%, rgba(11, 15, 20, 0.9) 100%);
+    border: 1px solid var(--line-strong);
+    border-radius: var(--radius-lg);
+    padding: 0;
+    box-shadow: var(--shadow-1), 0 20px 60px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    position: relative;
+  }
+  .hero-card-mini::before {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    border-radius: var(--radius-lg);
+    padding: 1px;
+    background: var(--grad-1);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0.4;
+    pointer-events: none;
+  }
+  .term-head {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 18px;
+    border-bottom: 1px solid var(--line);
+    background: rgba(0, 0, 0, 0.25);
+  }
+  .term-dot { width: 11px; height: 11px; border-radius: 50%; }
+  .term-dot.r { background: #ff5f57; }
+  .term-dot.y { background: #febc2e; }
+  .term-dot.g { background: #28c840; }
+  .term-title {
+    margin-left: 8px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--text-2);
+  }
+  .term-body {
+    padding: 22px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13.5px;
+    line-height: 1.85;
+    color: var(--text-1);
+  }
+  .term-body .ln { display: block; }
+  .term-prompt { color: var(--cyan); }
+  .term-key { color: var(--violet); }
+  .term-str { color: var(--lime); }
+  .term-com { color: var(--text-3); }
+  .term-num { color: var(--amber); }
+
+  /* ---------------- Stats ---------------- */
+  .stats-strip {
+    margin-top: 72px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    padding: 28px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    backdrop-filter: blur(10px);
+  }
+  .stat { text-align: center; }
+  .stat-num {
+    font-size: clamp(28px, 3vw, 40px);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    background: var(--grad-1);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1;
+  }
+  .stat-label {
+    margin-top: 8px;
+    color: var(--text-2);
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-weight: 500;
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  /* ---------------- About ---------------- */
+  .about {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 60px;
+    align-items: start;
+  }
+  .about-card {
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+  }
+  .about-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 14px;
+  }
+  .about-list li {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+  }
+  .about-list .ico {
+    width: 30px; height: 30px;
+    border-radius: 8px;
+    display: grid;
+    place-items: center;
+    background: rgba(0, 212, 230, 0.1);
+    color: var(--cyan);
+    border: 1px solid rgba(0, 212, 230, 0.2);
+    flex-shrink: 0;
+    font-size: 14px;
+  }
+  .about-list strong { color: var(--text-0); font-weight: 600; }
+  .about-list small { display: block; color: var(--text-2); font-size: 13px; margin-top: 2px; }
+  .about-body p {
+    color: var(--text-1);
+    font-size: 16px;
+    margin: 0 0 16px;
+  }
+  .about-body .quote {
+    margin-top: 26px;
+    padding: 22px 24px;
+    border-left: 3px solid var(--cyan);
+    background: rgba(0, 212, 230, 0.05);
+    border-radius: 0 12px 12px 0;
+    color: var(--text-0);
+    font-style: italic;
+    font-size: 17px;
+  }
+  .badges {
+    margin-top: 24px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--line);
+    font-size: 13px;
+    color: var(--text-1);
+  }
+  .badge .b-ico { font-size: 14px; }
+
+  /* ---------------- Featured Projects ---------------- */
+  .featured {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+  }
+  .feat-card {
+    background: linear-gradient(180deg, rgba(18, 24, 33, 0.8), rgba(11, 15, 20, 0.8));
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    padding: 28px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    min-height: 320px;
+  }
+  .feat-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(0, 212, 230, 0.4);
+    box-shadow: var(--shadow-2);
+  }
+  .feat-card.span-7 { grid-column: span 7; }
+  .feat-card.span-5 { grid-column: span 5; }
+  .feat-card.span-6 { grid-column: span 6; }
+  .feat-card.span-4 { grid-column: span 4; }
+  .feat-card.span-8 { grid-column: span 8; }
+  .feat-card.span-12 { grid-column: span 12; }
+  .feat-cat {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 12px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-family: 'JetBrains Mono', monospace;
+    margin-bottom: 16px;
+    align-self: flex-start;
+  }
+  .feat-cat.ai { background: rgba(176, 107, 255, 0.1); color: var(--violet); border: 1px solid rgba(176, 107, 255, 0.3); }
+  .feat-cat.iot { background: rgba(0, 212, 230, 0.1); color: var(--cyan); border: 1px solid rgba(0, 212, 230, 0.3); }
+  .feat-cat.health { background: rgba(255, 93, 143, 0.1); color: var(--rose); border: 1px solid rgba(255, 93, 143, 0.3); }
+  .feat-cat.enterprise { background: rgba(139, 195, 74, 0.1); color: var(--lime); border: 1px solid rgba(139, 195, 74, 0.3); }
+  .feat-cat.fintech { background: rgba(255, 181, 71, 0.1); color: var(--amber); border: 1px solid rgba(255, 181, 71, 0.3); }
+  .feat-cat.tools { background: rgba(255, 255, 255, 0.06); color: var(--text-1); border: 1px solid var(--line); }
+  .feat-title {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin: 0 0 12px;
+    color: var(--text-0);
+  }
+  .feat-desc {
+    color: var(--text-2);
+    font-size: 14.5px;
+    margin: 0 0 18px;
+    line-height: 1.6;
+  }
+  .feat-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: auto;
+    padding-top: 18px;
+    border-top: 1px dashed var(--line);
+  }
+  .feat-tag {
+    font-size: 11px;
+    color: var(--text-2);
+    padding: 4px 10px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.04);
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .feat-meta {
+    margin-top: 14px;
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    font-size: 12px;
+    color: var(--text-2);
+  }
+  .feat-meta a {
+    color: var(--cyan);
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: 500;
+    transition: opacity 0.2s;
+  }
+  .feat-meta a:hover { opacity: 0.8; }
+  .feat-stat {
+    background: rgba(0, 212, 230, 0.06);
+    border: 1px solid rgba(0, 212, 230, 0.2);
+    border-radius: 8px;
+    padding: 4px 10px;
+    color: var(--cyan);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    font-weight: 600;
+  }
+  .feat-card .accent {
+    position: absolute;
+    top: 0; right: 0;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(0, 212, 230, 0.18), transparent 70%);
+    pointer-events: none;
+  }
+
+  /* ---------------- All Projects ---------------- */
+  .filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 32px;
+  }
+  .filter-btn {
+    padding: 9px 16px;
+    border-radius: 10px;
+    border: 1px solid var(--line-strong);
+    background: rgba(255, 255, 255, 0.03);
+    color: var(--text-1);
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: inherit;
+  }
+  .filter-btn:hover {
+    color: var(--text-0);
+    border-color: var(--cyan);
+  }
+  .filter-btn.active {
+    background: var(--grad-1);
+    color: #08121a;
+    border-color: transparent;
+    font-weight: 600;
+  }
+  .filter-btn .count {
+    font-size: 11px;
+    opacity: 0.7;
+    margin-left: 6px;
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    gap: 16px;
+  }
+  .proj {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 20px;
+    transition: all 0.25s ease;
+    display: flex;
+    flex-direction: column;
+    min-height: 200px;
+  }
+  .proj:hover {
+    transform: translateY(-3px);
+    border-color: rgba(0, 212, 230, 0.35);
+    background: rgba(0, 212, 230, 0.03);
+  }
+  .proj-head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .proj-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 9px;
+    display: grid;
+    place-items: center;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--line);
+    flex-shrink: 0;
+  }
+  .proj h3 {
+    font-size: 16px;
+    margin: 0;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+  .proj-cat {
+    font-size: 10px;
+    color: var(--text-3);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-family: 'JetBrains Mono', monospace;
+    margin-top: 2px;
+  }
+  .proj-desc {
+    color: var(--text-2);
+    font-size: 13.5px;
+    margin: 0 0 14px;
+    line-height: 1.55;
+    flex: 1;
+  }
+  .proj-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 12px;
+  }
+  .proj-tech span {
+    font-size: 10.5px;
+    padding: 3px 8px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--text-2);
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .proj-link {
+    margin-top: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--cyan);
+    font-size: 12.5px;
+    font-weight: 500;
+  }
+
+  /* ---------------- Stack ---------------- */
+  .stack-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 18px;
+  }
+  .stack-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 24px;
+  }
+  .stack-card h4 {
+    margin: 0 0 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--cyan);
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 600;
+  }
+  .stack-card h4 .ico {
+    font-size: 18px;
+  }
+  .stack-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+  }
+  .pill {
+    padding: 6px 12px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--line);
+    color: var(--text-1);
+    font-size: 12.5px;
+    font-family: 'JetBrains Mono', monospace;
+    transition: all 0.2s ease;
+  }
+  .pill:hover {
+    background: rgba(0, 212, 230, 0.08);
+    border-color: rgba(0, 212, 230, 0.3);
+    color: var(--cyan);
+  }
+
+  /* ---------------- Experience ---------------- */
+  .exp-list {
+    display: grid;
+    gap: 20px;
+  }
+  .exp-card {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 30px;
+    padding: 26px 28px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    position: relative;
+  }
+  .exp-time {
+    color: var(--cyan);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .exp-where {
+    margin-top: 6px;
+    color: var(--text-2);
+    font-size: 13px;
+  }
+  .exp-role {
+    margin: 0 0 8px;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+  .exp-desc { color: var(--text-1); font-size: 14.5px; margin: 0 0 14px; }
+  .exp-points {
+    margin: 0;
+    padding-left: 18px;
+    color: var(--text-2);
+    font-size: 14px;
+  }
+  .exp-points li { margin-bottom: 4px; }
+  .exp-points li::marker { color: var(--cyan); }
+
+  /* ---------------- Contact ---------------- */
+  .contact-card {
+    text-align: center;
+    padding: 60px 30px;
+    background: linear-gradient(180deg, rgba(0, 212, 230, 0.05), rgba(176, 107, 255, 0.05));
+    border: 1px solid rgba(0, 212, 230, 0.2);
+    border-radius: var(--radius-lg);
+    position: relative;
+    overflow: hidden;
+  }
+  .contact-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 0%, rgba(0, 212, 230, 0.15), transparent 60%);
+    pointer-events: none;
+  }
+  .contact-card h2 {
+    font-size: clamp(28px, 4vw, 44px);
+    margin: 0 0 12px;
+    letter-spacing: -0.02em;
+  }
+  .contact-card p {
+    color: var(--text-1);
+    font-size: 17px;
+    max-width: 600px;
+    margin: 0 auto 32px;
+  }
+  .contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    position: relative;
+  }
+
+  /* ---------------- Footer ---------------- */
+  footer {
+    padding: 40px 0 32px;
+    border-top: 1px solid var(--line);
+    color: var(--text-2);
+    font-size: 13px;
+    text-align: center;
+  }
+  footer .made {
+    color: var(--text-3);
+    font-size: 12px;
+    margin-top: 6px;
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  /* ---------------- Reveal animation ---------------- */
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ---------------- Responsive ---------------- */
+  @media (max-width: 960px) {
+    .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+    .about { grid-template-columns: 1fr; gap: 32px; }
+    .stats-strip { grid-template-columns: repeat(2, 1fr); }
+    .feat-card.span-7,
+    .feat-card.span-5,
+    .feat-card.span-6,
+    .feat-card.span-4,
+    .feat-card.span-8 { grid-column: span 12; }
+    .exp-card { grid-template-columns: 1fr; gap: 14px; }
+  }
+  @media (max-width: 700px) {
+    section { padding: 72px 0; }
+    .nav-links { display: none; }
+    .nav-toggle { display: inline-flex; }
+    .nav-links.open {
+      display: flex;
+      position: absolute;
+      top: 100%;
+      right: 24px;
+      left: 24px;
+      flex-direction: column;
+      background: var(--bg-1);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 14px;
+      margin-top: 6px;
+      align-items: stretch;
+    }
+    .nav-links.open a { padding: 12px 14px; }
+    .stats-strip { padding: 20px; }
+    .hero { padding: 40px 0; min-height: auto; }
+    .term-body { font-size: 12px; }
+    .container { padding: 0 18px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+    .reveal { opacity: 1; transform: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============== NAV ============== -->
+<header class="nav">
+  <div class="container nav-inner">
+    <a href="#top" class="brand" aria-label="Home">
+      <span class="brand-mark">HK</span>
+      <span class="brand-text">
+        Hema Koteswar Naidu
+        <small>Engineering what's next.</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#featured">Projects</a>
+      <a href="#all-projects">Catalog</a>
+      <a href="#stack">Stack</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact" class="nav-cta">Let's talk →</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu">☰</button>
+  </div>
+</header>
+
+<!-- ============== HERO ============== -->
+<section class="hero" id="top">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <span class="hero-tag"><span class="dot"></span> Open to roles · Serving notice period</span>
+        <h1>
+          Building <span class="gradient-text">production systems</span> end-to-end —
+          from <span class="gradient-text">silicon to UI</span>.
+        </h1>
+        <p class="hero-sub">
+          I'm <strong>Hema Koteswar Naidu</strong> — a <strong>DevOps Engineer at TCS</strong> with 3+ years of IT experience,
+          founder of <strong>Circuvent Technologies (HT R&amp;D Labs)</strong>, and a relentless builder.
+          I've shipped <strong>50+ products</strong> across AI, IoT, FinTech, HealthTech, and Enterprise SaaS —
+          most of them solo, end-to-end, with backend, frontend, mobile, and ESP32 firmware in one stack.
+        </p>
+        <div class="hero-roles">
+          <span class="role-chip cyan">DevOps Engineer</span>
+          <span class="role-chip violet">AI / Full-Stack Builder</span>
+          <span class="role-chip lime">IoT &amp; ESP32</span>
+          <span class="role-chip">Founder · Circuvent Technologies</span>
+        </div>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="#featured">
+            See my work
+            <span aria-hidden="true">→</span>
+          </a>
+          <a class="btn btn-ghost" href="https://github.com/Hemakotibonthada" target="_blank" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.34-1.3-1.7-1.3-1.7-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.74 1.27 3.41.97.1-.76.41-1.27.74-1.56-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.19 1.18a11.1 11.1 0 0 1 5.81 0c2.22-1.49 3.19-1.18 3.19-1.18.63 1.59.23 2.77.11 3.06.74.81 1.19 1.83 1.19 3.09 0 4.42-2.69 5.4-5.26 5.68.42.36.79 1.07.79 2.17v3.22c0 .31.21.67.8.56C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5Z"/></svg>
+            GitHub
+          </a>
+        </div>
+        <div class="stats-strip">
+          <div class="stat"><div class="stat-num">3+</div><div class="stat-label">Years in IT</div></div>
+          <div class="stat"><div class="stat-num">50+</div><div class="stat-label">Projects shipped</div></div>
+          <div class="stat"><div class="stat-num">6</div><div class="stat-label">Tech domains</div></div>
+          <div class="stat"><div class="stat-num">A</div><div class="stat-label">Band @ TCS</div></div>
+        </div>
+      </div>
+
+      <aside class="hero-right" aria-label="Profile">
+        <div class="photo-wrap">
+          <img src="MyImage.png" alt="Portrait of Hema Koteswar Naidu" class="hero-photo" loading="eager" />
+          <span class="photo-tag"><span class="pulse"></span> Hyderabad · IST</span>
+        </div>
+        <div class="hero-card-mini">
+          <div class="term-head">
+            <span class="term-dot r"></span>
+            <span class="term-dot y"></span>
+            <span class="term-dot g"></span>
+            <span class="term-title">hema@circuvent ~ %  whoami</span>
+          </div>
+          <div class="term-body">
+            <span class="ln"><span class="term-key">role</span>     = <span class="term-str">"DevOps Engineer @ TCS"</span></span>
+            <span class="ln"><span class="term-key">founder</span>  = <span class="term-str">"Circuvent Technologies"</span></span>
+            <span class="ln"><span class="term-key">band</span>     = <span class="term-str">"A"</span>  <span class="term-com"># top performance</span></span>
+            <span class="ln"><span class="term-key">notice</span>   = <span class="term-num">true</span> <span class="term-com"># open to roles</span></span>
+            <span class="ln"><span class="term-key">projects</span> = <span class="term-num">50+</span> <span class="term-com"># shipped end-to-end</span></span>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ============== ABOUT ============== -->
+<section id="about">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">About</span>
+      <h2 class="section-title">An innovator who treats every problem like a product brief.</h2>
+      <p class="section-subtitle">
+        I don't stop at proofs-of-concept. I ship complete systems — auth, payments, mobile apps, hardware firmware,
+        analytics, and deployment — usually as a one-person team. DevOps is my day job; product engineering is my craft.
+      </p>
+    </div>
+
+    <div class="about">
+      <div class="about-card">
+        <ul class="about-list">
+          <li>
+            <span class="ico">⚡</span>
+            <div>
+              <strong>DevOps Engineer · TCS</strong>
+              <small>3+ years of production IT experience. Currently serving notice period.</small>
+            </div>
+          </li>
+          <li>
+            <span class="ico">🏆</span>
+            <div>
+              <strong>"A" Band — Top performance rating</strong>
+              <small>Recognised for technical depth and ownership.</small>
+            </div>
+          </li>
+          <li>
+            <span class="ico">🚀</span>
+            <div>
+              <strong>Founder · Circuvent Technologies / HT R&amp;D Labs</strong>
+              <small>Engineering what's next — AI, IoT, full-stack products.</small>
+            </div>
+          </li>
+          <li>
+            <span class="ico">🛠</span>
+            <div>
+              <strong>50+ shipped projects, 60+ public repositories</strong>
+              <small>Production deployments live on the web and Play/App stores.</small>
+            </div>
+          </li>
+          <li>
+            <span class="ico">🌍</span>
+            <div>
+              <strong>Based in Hyderabad, India</strong>
+              <small>Open to onsite, hybrid, and remote (IST/EMEA overlap).</small>
+            </div>
+          </li>
+        </ul>
+        <div class="badges">
+          <span class="badge"><span class="b-ico">🐳</span> Docker</span>
+          <span class="badge"><span class="b-ico">☁️</span> CI/CD</span>
+          <span class="badge"><span class="b-ico">🐧</span> Linux</span>
+          <span class="badge"><span class="b-ico">🔧</span> Bash · PowerShell</span>
+        </div>
+      </div>
+
+      <div class="about-body">
+        <p>
+          My day job is keeping production systems healthy at <strong>Tata Consultancy Services</strong> as a DevOps engineer —
+          containerisation, pipelines, monitoring, on-call. After hours, I run <strong>Circuvent Technologies</strong>
+          (also known as <em>HT R&amp;D Labs</em>), where I architect, build, and deploy products end-to-end.
+        </p>
+        <p>
+          The pattern that defines me: I see a real-world problem — a hospital that can't predict cancer risk early, a
+          village that can't talk to itself online, a homeowner who can't trust their smart switches — and I sit down
+          and ship the whole stack. Backend in FastAPI or Node, frontend in React or Flutter, mobile via Capacitor or
+          React Native, firmware in C++ on ESP32, AI on local Ollama or OpenAI, deployment on Firebase or Vercel,
+          containerised with Docker, observable from day one.
+        </p>
+        <p>
+          I love hard, multidisciplinary problems: a <strong>cancer prediction platform</strong> with an ML ensemble, a
+          <strong>local-first personal AI OS</strong> with 13 specialised agents, a <strong>self-hostable
+          Jira/Keka alternative</strong>, an <strong>algorithmic trading framework</strong> with defensive execution
+          layers, and a <strong>smart-home suite</strong> that talks to my own ESP32 nodes over MQTT. Each project is a
+          chance to learn a new layer of the stack and to prove I can ship it.
+        </p>
+        <p class="quote">
+          "I'm not a developer who happens to do DevOps. I'm an engineer who treats every problem — infra, product,
+          firmware, model — as one problem worth solving the whole way through."
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== FEATURED PROJECTS ============== -->
+<section id="featured">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Featured Work</span>
+      <h2 class="section-title">Six projects that show how I think.</h2>
+      <p class="section-subtitle">
+        Picked across AI, IoT, HealthTech, Enterprise, and FinTech — each one is a complete system, not a snippet.
+      </p>
+    </div>
+
+    <div class="featured">
+      <!-- 1. Nexus AI OS -->
+      <article class="feat-card span-7">
+        <span class="accent"></span>
+        <span class="feat-cat ai">AI · OS · Multi-Platform</span>
+        <h3 class="feat-title">NEXUS AI OS — a private, local-first personal operating system</h3>
+        <p class="feat-desc">
+          13+ specialised AI agents (companion, finance, health, smart home, comms, productivity, vision, security,
+          memory) orchestrated under one roof. Runs <strong>fully local via Ollama</strong> — zero cloud dependency.
+          Voice (Whisper + TTS) with wake-word, RAG long-term memory, ESP32 IoT control, automated PDF/Excel reports,
+          cron-based workflow automation. Ships as Electron desktop, React web UI, React Native mobile, and ESP32 firmware.
+        </p>
+        <div class="feat-tags">
+          <span class="feat-tag">FastAPI</span>
+          <span class="feat-tag">Ollama</span>
+          <span class="feat-tag">Electron</span>
+          <span class="feat-tag">React Native</span>
+          <span class="feat-tag">Whisper</span>
+          <span class="feat-tag">ESP32</span>
+          <span class="feat-tag">RAG</span>
+          <span class="feat-tag">Docker</span>
+        </div>
+        <div class="feat-meta">
+          <span class="feat-stat">13+ AGENTS</span>
+          <span class="feat-stat">4 PLATFORMS</span>
+          <a href="https://github.com/Hemakotibonthada/Ai-agent" target="_blank" rel="noopener">View repo ↗</a>
+        </div>
+      </article>
+
+      <!-- 2. CancerGuard AI -->
+      <article class="feat-card span-5">
+        <span class="accent"></span>
+        <span class="feat-cat health">HealthTech · ML Ensemble</span>
+        <h3 class="feat-title">CancerGuard AI — Healthcare Intelligence Platform</h3>
+        <p class="feat-desc">
+          69 REST endpoints, 55 DB models, 57 pages across Patient / Hospital / Admin portals. Cancer risk prediction
+          via <strong>XGBoost + LightGBM + Random Forest + Neural Net ensemble</strong>. Smartwatch vitals (HR, SpO2, ECG),
+          blood-donor matching with Haversine geolocation, HIPAA-style audit, JWT RBAC, async SQLAlchemy.
+        </p>
+        <div class="feat-tags">
+          <span class="feat-tag">FastAPI</span>
+          <span class="feat-tag">React + TS</span>
+          <span class="feat-tag">MUI</span>
+          <span class="feat-tag">XGBoost</span>
+          <span class="feat-tag">LightGBM</span>
+          <span class="feat-tag">SQLAlchemy</span>
+        </div>
+        <div class="feat-meta">
+          <span class="feat-stat">69 APIs</span>
+          <a href="https://github.com/Hemakotibonthada/CancerDetector" target="_blank" rel="noopener">View repo ↗</a>
+        </div>
+      </article>
+
+      <!-- 3. HT Connect HRMS -->
+      <article class="feat-card span-5">
+        <span class="accent"></span>
+        <span class="feat-cat enterprise">Enterprise · Self-Hosted</span>
+        <h3 class="feat-title">HT Connect — open-source Jira + Keka alternative</h3>
+        <p class="feat-desc">
+          A self-hostable internal portal combining <strong>HR (timesheets, payslips, org-tree, offer-letter studio,
+          welcome kits)</strong> and <strong>Agile work management (backlog, sprints, drag-and-drop Kanban,
+          burndown charts, RBAC)</strong>. 100% open source: React + Vite, Express, PostgreSQL + Prisma, JWT, Docker Compose.
+        </p>
+        <div class="feat-tags">
+          <span class="feat-tag">React</span>
+          <span class="feat-tag">Express</span>
+          <span class="feat-tag">PostgreSQL</span>
+          <span class="feat-tag">Prisma</span>
+          <span class="feat-tag">Docker</span>
+          <span class="feat-tag">JWT RBAC</span>
+        </div>
+        <div class="feat-meta">
+          <span class="feat-stat">2 PORTALS</span>
+          <a href="https://github.com/Hemakotibonthada/HT" target="_blank" rel="noopener">View repo ↗</a>
+        </div>
+      </article>
+
+      <!-- 4. Circuvent Smart Home -->
+      <article class="feat-card span-7">
+        <span class="accent"></span>
+        <span class="feat-cat iot">IoT · Live in Production</span>
+        <h3 class="feat-title">Circuvent Smart Home — Cross-platform IoT control suite</h3>
+        <p class="feat-desc">
+          A production Flutter app (Web · Android · iOS) wired to <strong>Firebase + MQTT + ESP32 nodes</strong>.
+          Multi-device control (lights, thermostats, locks, cameras), rule-based automations, scene builder,
+          energy analytics, biometric auth, and a companion firmware project (<em>SmartHome-Ai</em>) reading DHT22,
+          PZEM-004T, HC-SR04, PIR, MQ-2, LDR with auto safety shutoff. <strong>Live at circuvent-smarthome.web.app.</strong>
+        </p>
+        <div class="feat-tags">
+          <span class="feat-tag">Flutter</span>
+          <span class="feat-tag">Firebase</span>
+          <span class="feat-tag">MQTT</span>
+          <span class="feat-tag">ESP32</span>
+          <span class="feat-tag">Riverpod</span>
+          <span class="feat-tag">PlatformIO</span>
+        </div>
+        <div class="feat-meta">
+          <a href="https://circuvent-smarthome.web.app" target="_blank" rel="noopener">Live demo ↗</a>
+          <a href="https://github.com/Hemakotibonthada/SmartHome" target="_blank" rel="noopener">View repo ↗</a>
+        </div>
+      </article>
+
+      <!-- 5. CITADEL -->
+      <article class="feat-card span-6">
+        <span class="accent"></span>
+        <span class="feat-cat fintech">FinTech · Algorithmic Trading</span>
+        <h3 class="feat-title">CITADEL — Cognitive Intelligence Trading Architecture</h3>
+        <p class="feat-desc">
+          A modular Indian-equity trading framework with <strong>Defensive Execution Layers</strong>: paper + live
+          adapters (Zerodha, Upstox), 30+ feature library, ORB momentum / mean reversion / pairs strategies,
+          ATR + Kelly position sizing, daily/weekly loss limits, latency &amp; feed tripwires, walk-forward backtests,
+          DuckDB + Parquet storage. Built for safety-first quantitative research.
+        </p>
+        <div class="feat-tags">
+          <span class="feat-tag">Python 3.11</span>
+          <span class="feat-tag">XGBoost</span>
+          <span class="feat-tag">LightGBM</span>
+          <span class="feat-tag">PyTorch</span>
+          <span class="feat-tag">DuckDB</span>
+          <span class="feat-tag">Pydantic</span>
+        </div>
+        <div class="feat-meta">
+          <a href="https://github.com/Hemakotibonthada/CITADEL" target="_blank" rel="noopener">View repo ↗</a>
+        </div>
+      </article>
+
+      <!-- 6. NetShare Pro -->
+      <article class="feat-card span-6">
+        <span class="accent"></span>
+        <span class="feat-cat tools">Tooling · Cross-Platform</span>
+        <h3 class="feat-title">NetShare Pro — high-speed LAN file sharing</h3>
+        <p class="feat-desc">
+          A glass-morphism file-sharing app that hits saturation speeds on local networks. <strong>8 MB chunked
+          streaming, files up to 1 TB, MD5 integrity</strong>, parallel uploads, ZIP bulk download, QR-code mobile
+          pairing, automatic Windows firewall configuration, ships as standalone <code>.exe</code> and <code>.app</code>.
+        </p>
+        <div class="feat-tags">
+          <span class="feat-tag">Python</span>
+          <span class="feat-tag">Flask</span>
+          <span class="feat-tag">PyInstaller</span>
+          <span class="feat-tag">WebSocket</span>
+        </div>
+        <div class="feat-meta">
+          <span class="feat-stat">1 TB / FILE</span>
+          <a href="https://github.com/Hemakotibonthada/Sharing_Tool" target="_blank" rel="noopener">View repo ↗</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============== ALL PROJECTS ============== -->
+<section id="all-projects">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Project Catalog</span>
+      <h2 class="section-title">30+ shipped projects, all in one place.</h2>
+      <p class="section-subtitle">Filter by domain. Every card links to its GitHub repository.</p>
+    </div>
+
+    <div class="filters" id="filters"></div>
+    <div class="projects-grid" id="projectsGrid"></div>
+  </div>
+</section>
+
+<!-- ============== STACK ============== -->
+<section id="stack">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Tech Stack</span>
+      <h2 class="section-title">Tools I reach for, by layer.</h2>
+      <p class="section-subtitle">From bare-metal ESP32 firmware to LLM orchestration — the same hands across the stack.</p>
+    </div>
+
+    <div class="stack-grid">
+      <div class="stack-card">
+        <h4><span class="ico">🛠</span> DevOps &amp; Infra</h4>
+        <div class="stack-pills">
+          <span class="pill">Docker</span><span class="pill">Docker Compose</span><span class="pill">CI/CD</span>
+          <span class="pill">Linux</span><span class="pill">Bash</span><span class="pill">PowerShell</span>
+          <span class="pill">Git · GitHub Actions</span><span class="pill">Vercel</span><span class="pill">Firebase Hosting</span>
+          <span class="pill">Nginx</span><span class="pill">Monitoring</span>
+        </div>
+      </div>
+      <div class="stack-card">
+        <h4><span class="ico">🐍</span> Languages</h4>
+        <div class="stack-pills">
+          <span class="pill">Python</span><span class="pill">TypeScript</span><span class="pill">JavaScript</span>
+          <span class="pill">Dart</span><span class="pill">C++ (Arduino/ESP-IDF)</span><span class="pill">Java</span>
+          <span class="pill">SQL</span><span class="pill">HTML/CSS</span>
+        </div>
+      </div>
+      <div class="stack-card">
+        <h4><span class="ico">🚀</span> Backend</h4>
+        <div class="stack-pills">
+          <span class="pill">FastAPI</span><span class="pill">Node.js (Express)</span><span class="pill">Flask</span>
+          <span class="pill">Next.js API Routes</span><span class="pill">Firebase Cloud Functions</span>
+          <span class="pill">SQLAlchemy</span><span class="pill">Prisma</span><span class="pill">Mongoose</span>
+          <span class="pill">JWT · OAuth</span><span class="pill">REST · WebSocket · MQTT</span>
+        </div>
+      </div>
+      <div class="stack-card">
+        <h4><span class="ico">🎨</span> Frontend &amp; Mobile</h4>
+        <div class="stack-pills">
+          <span class="pill">React 18/19</span><span class="pill">Next.js 16</span><span class="pill">Vite</span>
+          <span class="pill">Flutter</span><span class="pill">React Native</span>
+          <span class="pill">Ionic + Capacitor</span><span class="pill">Electron</span><span class="pill">Angular</span>
+          <span class="pill">Tailwind CSS</span><span class="pill">Material UI</span><span class="pill">Framer Motion</span>
+        </div>
+      </div>
+      <div class="stack-card">
+        <h4><span class="ico">🧠</span> AI / ML</h4>
+        <div class="stack-pills">
+          <span class="pill">OpenAI API</span><span class="pill">Ollama (local LLMs)</span>
+          <span class="pill">XGBoost</span><span class="pill">LightGBM</span><span class="pill">scikit-learn</span>
+          <span class="pill">PyTorch</span><span class="pill">TextBlob</span><span class="pill">Whisper STT</span>
+          <span class="pill">RAG · Vector Search</span>
+        </div>
+      </div>
+      <div class="stack-card">
+        <h4><span class="ico">📡</span> IoT &amp; Hardware</h4>
+        <div class="stack-pills">
+          <span class="pill">ESP32</span><span class="pill">ESP32-CAM</span><span class="pill">PlatformIO</span>
+          <span class="pill">Arduino</span><span class="pill">MQTT (Mosquitto)</span>
+          <span class="pill">DHT22 · PZEM-004T</span><span class="pill">HC-SR04 · PIR · MQ-2 · LDR</span>
+          <span class="pill">Relays · Servos · OTA</span>
+        </div>
+      </div>
+      <div class="stack-card">
+        <h4><span class="ico">🗄️</span> Databases &amp; Storage</h4>
+        <div class="stack-pills">
+          <span class="pill">PostgreSQL</span><span class="pill">MongoDB</span><span class="pill">Firestore</span>
+          <span class="pill">Firebase Realtime DB</span><span class="pill">SQLite</span>
+          <span class="pill">DuckDB</span><span class="pill">Parquet</span><span class="pill">Redis (cache)</span>
+        </div>
+      </div>
+      <div class="stack-card">
+        <h4><span class="ico">☁️</span> Cloud &amp; Integrations</h4>
+        <div class="stack-pills">
+          <span class="pill">Firebase Suite</span><span class="pill">Vercel</span><span class="pill">Google Cloud TTS</span>
+          <span class="pill">Razorpay</span><span class="pill">Resend</span><span class="pill">Nodemailer + SMTP</span>
+          <span class="pill">Google OAuth · Photos</span><span class="pill">Google Maps</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== EXPERIENCE ============== -->
+<section id="experience">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Experience</span>
+      <h2 class="section-title">A day job in DevOps, a parallel career as a founder.</h2>
+    </div>
+
+    <div class="exp-list">
+      <div class="exp-card">
+        <div>
+          <div class="exp-time">Aug 2023 — Present</div>
+          <div class="exp-where">Tata Consultancy Services · Hyderabad</div>
+        </div>
+        <div>
+          <h3 class="exp-role">DevOps Engineer</h3>
+          <p class="exp-desc">
+            Operate and harden production systems for an enterprise client. Recognised with the <strong>"A" performance
+            band</strong> for technical depth and ownership. Currently serving notice period.
+          </p>
+          <ul class="exp-points">
+            <li>Containerised workloads with Docker; managed CI/CD pipelines for build &amp; deployment.</li>
+            <li>Owned monitoring, log aggregation, alerting, and incident triage across services.</li>
+            <li>Automated repetitive infra tasks with Bash / PowerShell to reclaim engineering hours.</li>
+            <li>Partnered with developers on release readiness, environment parity, and security patching.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-card">
+        <div>
+          <div class="exp-time">2024 — Present</div>
+          <div class="exp-where">Circuvent Technologies · HT R&amp;D Labs · Founder</div>
+        </div>
+        <div>
+          <h3 class="exp-role">Founder &amp; Full-Stack Engineer</h3>
+          <p class="exp-desc">
+            Building Circuvent Technologies as a one-person R&amp;D lab spanning AI, IoT, Robotics, and Full-Stack.
+            Designed and shipped <strong>50+ products</strong> end-to-end — backend, web, mobile, firmware,
+            ML, DevOps — and operate the company's marketing site and HRMS portal on production infrastructure.
+          </p>
+          <ul class="exp-points">
+            <li>Designed &amp; deployed <strong>Circuvent Smart Home</strong> (Flutter + Firebase + MQTT + ESP32) — live at circuvent-smarthome.web.app.</li>
+            <li>Architected <strong>HT Connect</strong> — a self-hostable HRMS + Agile portal (React + Express + PostgreSQL + Docker).</li>
+            <li>Built <strong>Circuvent Mail</strong>, a self-hosted custom-domain email system (Node + Firebase + SMTP).</li>
+            <li>Shipped <strong>Circuvent Loan</strong> — Flutter + Firebase loan app with CIBIL verification, live at circuvent.web.app.</li>
+            <li>Set up production marketing site on Next.js 16 + Tailwind 4 + Framer Motion + Vercel.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== CONTACT ============== -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-card">
+      <span class="eyebrow">Let's build</span>
+      <h2>Have a hard problem? I like those.</h2>
+      <p>
+        I'm open to engineering roles, founding-engineer opportunities, and freelance product builds —
+        especially anything that blends DevOps with full-stack, AI, or IoT.
+      </p>
+      <div class="contact-links">
+        <a class="btn btn-primary" href="https://github.com/Hemakotibonthada" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.34-1.3-1.7-1.3-1.7-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.74 1.27 3.41.97.1-.76.41-1.27.74-1.56-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.19 1.18a11.1 11.1 0 0 1 5.81 0c2.22-1.49 3.19-1.18 3.19-1.18.63 1.59.23 2.77.11 3.06.74.81 1.19 1.83 1.19 3.09 0 4.42-2.69 5.4-5.26 5.68.42.36.79 1.07.79 2.17v3.22c0 .31.21.67.8.56C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5Z"/></svg>
+          @Hemakotibonthada
+        </a>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/hemakoti/" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 3H3.55C2.7 3 2 3.7 2 4.55v14.9C2 20.3 2.7 21 3.55 21h16.9c.85 0 1.55-.7 1.55-1.55V4.55C22 3.7 21.3 3 20.45 3ZM8.35 18.45h-2.6V9.75h2.6v8.7ZM7.05 8.6c-.85 0-1.55-.7-1.55-1.55s.7-1.55 1.55-1.55 1.55.7 1.55 1.55-.7 1.55-1.55 1.55Zm11.4 9.85h-2.6v-4.25c0-1 0-2.3-1.4-2.3s-1.65 1.1-1.65 2.25v4.3h-2.6V9.75h2.5v1.2h.05c.35-.65 1.2-1.35 2.5-1.35 2.65 0 3.2 1.75 3.2 4v4.85Z"/></svg>
+          /in/hemakoti
+        </a>
+        <a class="btn btn-ghost" href="mailto:mr.hknaidu@gmail.com">
+          <span style="font-size:18px;line-height:1;">✉️</span>
+          mr.hknaidu@gmail.com
+        </a>
+        <a class="btn btn-ghost" href="tel:+917659993331">
+          <span style="font-size:18px;line-height:1;">📞</span>
+          +91 76599 93331
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div>© <span id="year"></span> Hema Koteswar Naidu · Hyderabad, India · Engineering what's next.</div>
+    <div class="made">Single-file portfolio · No build step · Deploys anywhere</div>
+  </div>
+</footer>
+
+<script>
+  // ============== Year ==============
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  // ============== Mobile nav ==============
+  const navToggle = document.getElementById("navToggle");
+  const navLinks = document.getElementById("navLinks");
+  navToggle.addEventListener("click", () => navLinks.classList.toggle("open"));
+  navLinks.querySelectorAll("a").forEach(a => a.addEventListener("click", () => navLinks.classList.remove("open")));
+
+  // ============== Project Catalog ==============
+  const PROJECTS = [
+    // AI & ML
+    { name: "NEXUS AI OS", repo: "Ai-agent", cat: "AI & ML", icon: "🧠",
+      desc: "Local-first personal AI OS with 13+ specialised agents, voice (Whisper), RAG memory, ESP32 control.",
+      tech: ["FastAPI","Ollama","Electron","React Native","Whisper","ESP32"] },
+    { name: "JARVIS — AI Assistant", repo: "Jarvis-Ai", cat: "AI & ML", icon: "🤖",
+      desc: "Voice-driven assistant with Google Cloud TTS, smart-home + system control, intent classifier, MQTT.",
+      tech: ["Python","Flask","SocketIO","MQTT","Google TTS"] },
+    { name: "JARVIS UI", repo: "Jarvis-UI", cat: "AI & ML", icon: "🛰",
+      desc: "The latest working JARVIS front-end with animated visual states and live transcription.",
+      tech: ["Python","Web UI"] },
+    { name: "Vision-AI · ESP32", repo: "Vision-Ai", cat: "AI & ML", icon: "👁",
+      desc: "ESP32-CAM intelligent vision: MJPEG streaming, face detection, motion + anomaly detection, OTA.",
+      tech: ["ESP32-CAM","FastAPI","MQTT","React"] },
+    { name: "Ai-Home", repo: "Ai-Home", cat: "AI & ML", icon: "🏠",
+      desc: "Flutter front-end for an AI-orchestrated home; pairs with NEXUS agents.",
+      tech: ["Flutter","Dart","MQTT"] },
+    { name: "MemoryLane", repo: "MEMORYLANE", cat: "AI & ML", icon: "📓",
+      desc: "Private time capsule with sentiment analysis and AI memory clustering; all data stays local.",
+      tech: ["Python","Flask","TextBlob","scikit-learn"] },
+    { name: "Ai (collected)", repo: "Ai", cat: "AI & ML", icon: "🔮",
+      desc: "An umbrella repo bundling AI experiments — chats, automation, vision projects.",
+      tech: ["JavaScript","Python"] },
+    { name: "Jarvis (server)", repo: "Jarvis", cat: "AI & ML", icon: "⚙️",
+      desc: "JavaScript orchestration layer for the JARVIS stack.",
+      tech: ["Node.js","JavaScript"] },
+
+    // FinTech
+    { name: "CITADEL Trading", repo: "CITADEL", cat: "FinTech", icon: "🏛",
+      desc: "Cognitive Intelligence Trading Architecture with Defensive Execution Layers.",
+      tech: ["Python","XGBoost","PyTorch","DuckDB"] },
+    { name: "Stock Agent (NSE)", repo: "StockMarket-Agent", cat: "FinTech", icon: "📈",
+      desc: "Local-first NSE trading agent. Paper trading by default; Zerodha + Upstox adapters; walk-forward backtests.",
+      tech: ["Python","Pydantic","Typer","Parquet"] },
+    { name: "stockmarket", repo: "stockmarket", cat: "FinTech", icon: "📊",
+      desc: "Companion sandbox for trading-strategy experiments.",
+      tech: ["Python"] },
+    { name: "Financial Analyzer", repo: "financialanalyzer", cat: "FinTech", icon: "💰",
+      desc: "AI-powered finance with Gmail integration, recurring-expense detection, health-score & PDF export.",
+      tech: ["Node.js","Express","MongoDB","Ollama/OpenAI"] },
+    { name: "Financial Analyzer (SaaS)", repo: "financialanalyzer_subscriptionmodel", cat: "FinTech", icon: "💳",
+      desc: "Enterprise edition: subscription + admin portal, Razorpay payments, Web + Mobile + Windows desktop.",
+      tech: ["React","React Native","Electron","Firebase","Razorpay"] },
+    { name: "Circuvent Loan", repo: "Loan", cat: "FinTech", icon: "🏦",
+      desc: "Flutter + Firebase loan platform: CIBIL verification, eligibility calculator, admin defaulter tracking. Live at circuvent.web.app.",
+      tech: ["Flutter","Firebase","fl_chart"] },
+    { name: "PriceMind", repo: "PriceMind", cat: "FinTech", icon: "💹",
+      desc: "Price-tracking & alerting prototype.",
+      tech: ["JavaScript"] },
+
+    // IoT / Smart Home
+    { name: "Circuvent Smart Home", repo: "SmartHome", cat: "IoT", icon: "🏡",
+      desc: "Production Flutter app for IoT control across Web/Android/iOS. Live at circuvent-smarthome.web.app.",
+      tech: ["Flutter","Firebase","MQTT","Riverpod"] },
+    { name: "SmartHome AI · ESP32", repo: "SmartHome-Ai", cat: "IoT", icon: "🔌",
+      desc: "Flutter + ESP32 firmware reading DHT22, PZEM-004T, HC-SR04, MQ-2, PIR, LDR. AI trend/anomaly insights.",
+      tech: ["Flutter","ESP32","PlatformIO","MQTT"] },
+    { name: "ESP32 IoT Dashboard", repo: "HomeAutomation_Pro", cat: "IoT", icon: "📟",
+      desc: "Improved dashboards for ESP32 with 8-relay control, live temperature & humidity charts.",
+      tech: ["ESP32","C++","HTML/JS"] },
+    { name: "Home Automation D1 Code", repo: "HTR-DLab_D1Code", cat: "IoT", icon: "🧩",
+      desc: "Firmware for the HT R&D Labs home-automation device.",
+      tech: ["C++","ESP32"] },
+    { name: "MQTT First", repo: "Mqtt_First", cat: "IoT", icon: "📡",
+      desc: "Enterprise-grade smart home automation suite blueprint (microservices, MQTT, ESP32, dashboards).",
+      tech: ["Python","Node","ESP32","React"] },
+    { name: "Home Automation (legacy)", repo: "HomeAutomation", cat: "IoT", icon: "🔧",
+      desc: "Early office-project firmware version.",
+      tech: ["C++","ESP32"] },
+
+    // HealthTech
+    { name: "CancerGuard AI", repo: "CancerDetector", cat: "HealthTech", icon: "🧬",
+      desc: "Healthcare intelligence platform; 69 endpoints, 55 models, 3 portals, ML ensemble, blood-donor matching.",
+      tech: ["FastAPI","React","MUI","XGBoost","LightGBM"] },
+    { name: "AI Health Analysis", repo: "Health_India", cat: "HealthTech", icon: "❤️‍🩹",
+      desc: "Personal health dashboard: vitals, sleep, lab results, risk assessments via GPT-4.",
+      tech: ["Node.js","React","MongoDB","OpenAI"] },
+
+    // Enterprise / SaaS
+    { name: "HT Connect Portal", repo: "HT", cat: "Enterprise", icon: "🏢",
+      desc: "Self-hostable HRMS + Agile portal. Sprints, Kanban, Burndown, Timesheets, Offer-Letter Studio.",
+      tech: ["React","Express","PostgreSQL","Prisma","Docker"] },
+    { name: "HT HRMS Portal", repo: "HT_HRMS", cat: "Enterprise", icon: "👥",
+      desc: "Management portal for HT R&D — companion to HT Connect.",
+      tech: ["TypeScript","React","Node.js"] },
+    { name: "HRMS Circuvent", repo: "HRMS.circuvent", cat: "Enterprise", icon: "📋",
+      desc: "Circuvent's internal HR system.",
+      tech: ["Enterprise"] },
+    { name: "CP-Office", repo: "CP-Office", cat: "Enterprise", icon: "🗂",
+      desc: "Office-operations platform (TypeScript).",
+      tech: ["TypeScript","React"] },
+    { name: "Circuvent Mail", repo: "Mail", cat: "Enterprise", icon: "✉️",
+      desc: "Self-hosted email system with custom-domain inboxes, admin portal, attachments, SMTP send/receive.",
+      tech: ["Node.js","Express","Firebase","Nodemailer","SMTP"] },
+    { name: "10 SaaS Apps Portfolio", repo: "Ideas", cat: "Enterprise", icon: "💡",
+      desc: "Ten enterprise-grade SaaS apps (CRM, Invoicing, LMS, POS, HR…) built on Next.js + Prisma + Stripe.",
+      tech: ["Next.js","Prisma","PostgreSQL","Stripe"] },
+    { name: "App Builder", repo: "App-Builder", cat: "Enterprise", icon: "🧱",
+      desc: "Large TypeScript codebase for an app-generation/scaffolding platform.",
+      tech: ["TypeScript"] },
+    { name: "Circuvent Technologies site", repo: "circuvent-technologies", cat: "Enterprise", icon: "🌐",
+      desc: "Marketing + services site for Circuvent: 18 routes, 50+ components, Resend, PWA, accessibility-first.",
+      tech: ["Next.js 16","React 19","Tailwind 4","Framer Motion"] },
+    { name: "HT R&D Website", repo: "HTResearchlab.com", cat: "Enterprise", icon: "🔬",
+      desc: "Full-stack site for HT Research & Development Labs — IoT, learning, jobs, chat, social integration.",
+      tech: ["React","Node.js","MongoDB"] },
+
+    // Productivity / EdTech
+    { name: "EduKanban", repo: "EduKanban", cat: "Productivity", icon: "📚",
+      desc: "AI-generated personalised learning paths, Kanban dashboard, assessments, real-time chat tutor.",
+      tech: ["React","Express","MongoDB","Socket.IO","OpenAI"] },
+    { name: "ATS Resume Builder", repo: "ATS-Resume", cat: "Productivity", icon: "📄",
+      desc: "FastAPI + React resume tool: 0-100 ATS score, keyword optimisation, JD matching, PDF/DOCX export.",
+      tech: ["FastAPI","React","ReportLab","python-docx"] },
+    { name: "TimeCapsule", repo: "timeCapsule", cat: "Productivity", icon: "⏳",
+      desc: "Memory-journaling web + Android app with timeline, Google Photos optional sync, JWT.",
+      tech: ["Express","React","TypeScript","Capacitor"] },
+    { name: "90-Day Challenge", repo: "90daysChallange", cat: "Productivity", icon: "🗓",
+      desc: "Habit / discipline tracker for personal challenges.",
+      tech: ["JavaScript","React"] },
+    { name: "MicroHabit", repo: "MicroHabit", cat: "Productivity", icon: "🌱",
+      desc: "Tiny-habit tracker focused on consistency over intensity.",
+      tech: ["CSS","JavaScript"] },
+    { name: "Skillbank", repo: "skillbank", cat: "Productivity", icon: "🧠",
+      desc: "Personal knowledge bank for skill tracking.",
+      tech: ["JavaScript"] },
+
+    // Mobile / Community
+    { name: "Mana Uru (మన ఊరు)", repo: "manauru", cat: "Mobile", icon: "🏘",
+      desc: "Cross-platform Telugu village community app — feed, fundraising, problem reporting, events, chat.",
+      tech: ["React Native","Expo","Firebase","Zustand"] },
+    { name: "Bharath Startups", repo: "bharathstartups", cat: "Mobile", icon: "🚀",
+      desc: "Startup Connect India — match founders with co-founders / engineers / designers with equity contracts.",
+      tech: ["React","React Native","Firebase","TypeScript"] },
+    { name: "BreakupBuddy", repo: "breakupbuddy", cat: "Mobile", icon: "💔",
+      desc: "Flutter companion app helping people process and recover.",
+      tech: ["Flutter","Dart"] },
+    { name: "GuideMe Travel", repo: "Guide_Me", cat: "Mobile", icon: "🧭",
+      desc: "AI-powered itinerary planner with Google Maps, expense tracking, photo memories, OAuth.",
+      tech: ["Ionic","Angular","Capacitor","OpenAI"] },
+    { name: "Travelmate", repo: "Travelmate", cat: "Mobile", icon: "✈️",
+      desc: "React Native travel companion.",
+      tech: ["React Native","TypeScript"] },
+    { name: "SilverCircle", repo: "SilverCircle", cat: "Mobile", icon: "💍",
+      desc: "TypeScript social app prototype.",
+      tech: ["TypeScript","React Native"] },
+    { name: "DharmaYatra", repo: "DharmaYatra", cat: "Mobile", icon: "🛕",
+      desc: "Pilgrimage planner concept.",
+      tech: ["JavaScript"] },
+
+    // Tools
+    { name: "NetShare Pro", repo: "Sharing_Tool", cat: "Tools", icon: "📤",
+      desc: "Cross-platform LAN file sharing: 8MB chunks, 1TB/file, MD5 integrity, QR pairing, standalone builds.",
+      tech: ["Python","Flask","PyInstaller"] },
+    { name: "My Portfolio (Vite)", repo: "portfilio", cat: "Tools", icon: "🪪",
+      desc: "Earlier React + Vite version of this portfolio with component-based layout.",
+      tech: ["React","Vite"] },
+  ];
+
+  const CATS = [
+    { id: "all", label: "All" },
+    { id: "AI & ML", label: "AI & ML" },
+    { id: "IoT", label: "IoT" },
+    { id: "FinTech", label: "FinTech" },
+    { id: "HealthTech", label: "HealthTech" },
+    { id: "Enterprise", label: "Enterprise" },
+    { id: "Productivity", label: "Productivity" },
+    { id: "Mobile", label: "Mobile" },
+    { id: "Tools", label: "Tools" },
+  ];
+
+  function counts(cat) {
+    if (cat === "all") return PROJECTS.length;
+    return PROJECTS.filter(p => p.cat === cat).length;
+  }
+
+  const filtersEl = document.getElementById("filters");
+  const gridEl = document.getElementById("projectsGrid");
+
+  function renderFilters(activeId) {
+    filtersEl.innerHTML = "";
+    CATS.forEach(c => {
+      const btn = document.createElement("button");
+      btn.className = "filter-btn" + (activeId === c.id ? " active" : "");
+      btn.innerHTML = `${c.label} <span class="count">${counts(c.id)}</span>`;
+      btn.addEventListener("click", () => {
+        renderFilters(c.id);
+        renderProjects(c.id);
+      });
+      filtersEl.appendChild(btn);
+    });
+  }
+
+  function renderProjects(catId) {
+    const list = catId === "all" ? PROJECTS : PROJECTS.filter(p => p.cat === catId);
+    gridEl.innerHTML = "";
+    list.forEach(p => {
+      const a = document.createElement("a");
+      a.className = "proj reveal";
+      a.href = `https://github.com/Hemakotibonthada/${p.repo}`;
+      a.target = "_blank";
+      a.rel = "noopener";
+      a.innerHTML = `
+        <div class="proj-head">
+          <div class="proj-icon">${p.icon}</div>
+          <div>
+            <h3>${p.name}</h3>
+            <div class="proj-cat">${p.cat}</div>
+          </div>
+        </div>
+        <p class="proj-desc">${p.desc}</p>
+        <div class="proj-tech">${p.tech.map(t => `<span>${t}</span>`).join("")}</div>
+        <span class="proj-link">View on GitHub →</span>
+      `;
+      gridEl.appendChild(a);
+    });
+    // Activate reveal for newly added cards
+    requestAnimationFrame(() => {
+      gridEl.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+    });
+  }
+
+  // ============== Reveal on scroll ==============
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add("in");
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll("section, .feat-card, .stack-card, .exp-card, .about-card, .about-body, .contact-card")
+    .forEach(el => { el.classList.add("reveal"); observer.observe(el); });
+
+  // Initial render
+  renderFilters("all");
+  renderProjects("all");
+</script>
+
+</body>
 </html>

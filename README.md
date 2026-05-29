@@ -1,16 +1,41 @@
-# React + Vite
+# Hema Koteswar Naidu — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> Single-file HTML portfolio. No build step. Auto-deployed to GitHub Pages.
 
-Currently, two official plugins are available:
+**Live site**: https://hemakotibonthada.github.io/portfilio/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## What's in here
 
-## React Compiler
+| File | Purpose |
+|------|---------|
+| `index.html` | Self-contained portfolio (HTML + CSS + JS). |
+| `MyImage.png` | Hero photo. |
+| `.github/workflows/deploy.yml` | Publishes the site to GitHub Pages on every push to `main`. |
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## About me
 
-## Expanding the ESLint configuration
+- **DevOps Engineer** @ Tata Consultancy Services (3+ years, "A" performance band, currently serving notice period)
+- **Founder** of **Circuvent Technologies / HT R&D Labs** — engineering what's next.
+- 50+ shipped projects across AI, IoT, FinTech, HealthTech, Enterprise SaaS, and Mobile.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Contact
+
+- GitHub: [@Hemakotibonthada](https://github.com/Hemakotibonthada)
+- LinkedIn: [/in/hemakoti](https://www.linkedin.com/in/hemakoti/)
+- Email: [mr.hknaidu@gmail.com](mailto:mr.hknaidu@gmail.com)
+- Phone: +91 76599 93331
+- Location: Hyderabad, India
+
+## Local preview
+
+Just open `index.html` in your browser. No dependencies required.
+
+```bash
+# Optional: a tiny local server
+python -m http.server 8080
+# then visit http://localhost:8080
+```
+
+## Deploy
+
+Push to `main`. The workflow at `.github/workflows/deploy.yml` will publish to GitHub Pages automatically.
